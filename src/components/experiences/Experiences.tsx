@@ -396,7 +396,7 @@ const Experiences: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-2 text-sm">
                       <Route size={14} className="text-red-500 flex-shrink-0" />
-                      <span className="text-gray-300">{experience.miles || experience.KMs} miles</span>
+                      <span className="text-gray-300">{experience.miles || experience.KMs} Km</span>
                     </div>
                   </div>
 
