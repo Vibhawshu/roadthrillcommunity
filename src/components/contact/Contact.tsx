@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import { Mail, Phone, MapPin, Facebook, Instagram, Youtube, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 // Your Google Apps Script URL for contact form
-const CONTACT_SCRIPT_URL = 'YOUR_CONTACT_SCRIPT_URL_HERE' // Replace with your deployed URL
+const CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkaK7D9Qk1unyu5LAAkegHsUSeDnNtTa_N1jvORl9ldN3lEIhHg39WjO3cApL_N08/exec' // Replace with your deployed URL
 
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null)

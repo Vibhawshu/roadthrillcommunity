@@ -59,7 +59,7 @@ const WhyJoin: React.FC = () => {
       <div className="relative z-10 container-custom">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-red-500 font-semibold text-sm uppercase tracking-wider">WHY US</span>
+          <span className="text-red-500 font-semibold text-sm uppercase tracking-wider">THE THRILL AWAITS</span>
           <h2 className="text-white mt-2 mb-4 font-bold text-6xl lg:text-7xl">
             Ride With <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Us</span>
           </h2>

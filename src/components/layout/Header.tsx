@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
-import logo from '../../assets/icons/logo.svg'
+import logo from '../../assets/icons/Logo.png'
 import StartNowModal from '../common/StartNowModal'
 
 const Header: React.FC = () => {
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
   // Bottom navigation items (CALENDAR, WHY JOIN, JOIN NOW, CONTACT)
   const bottomNavItems = [
     { name: 'CALENDAR', href: '#events' },
-    { name: 'WHY JOIN', href: '#why-join' },
+    { name: 'About Us', href: '#team' },
     { name: 'JOIN NOW', href: '#join' },
     { name: 'CONTACT', href: '#contact' }
   ]
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     { name: 'HOME', href: '#home' },
     { name: 'EXPERIENCES', href: '#experiences' },
     { name: 'CALENDAR', href: '#events' },
-    { name: 'WHY JOIN', href: '#why-join' },
+    { name: 'About Us', href: '#team' },
     { name: 'JOIN NOW', href: '#join' },
     { name: 'CONTACT', href: '#contact' }
   ]

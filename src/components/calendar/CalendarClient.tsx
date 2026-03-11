@@ -137,7 +137,6 @@ const CalendarClient: React.FC = () => {
       <div className="relative z-10 container-custom">
         {/* Section Header */}
 <div className="text-center max-w-3xl mx-auto mb-12">
-  <span className="text-red-500 font-semibold text-sm uppercase tracking-wider">SIGNATURE RIDES</span>
   <h2 className="text-white mt-2 mb-4 font-bold text-6xl lg:text-7xl">
     Signature <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Rides</span>
   </h2>
@@ -353,7 +352,7 @@ const CalendarClient: React.FC = () => {
                     {/* Rules */}
                     {selectedEvent.rules && (
                       <div>
-                        <p className="text-sm text-gray-400 mb-2 uppercase tracking-wider">Rules & Requirements</p>
+                        <p className="text-sm text-gray-400 mb-2 uppercase tracking-wider">Basic Rules</p>
                         <p className="text-gray-400 text-sm bg-white/5 p-3 rounded-lg">
                           {selectedEvent.rules}
                         </p>

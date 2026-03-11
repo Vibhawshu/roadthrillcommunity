@@ -46,7 +46,7 @@ interface Experience {
 // Create image mapping for main cards
 const imageMap: Record<string, string> = {
   'Leh Ride': lehImg1,
-  'Viet Nam Ride': vietnamImg1,
+  'Vietnam Ride': vietnamImg1,
   'Uncharted Terrains': unchartedImg1,
   'Ladakh Ride': ladakhImg,
 }
@@ -61,7 +61,7 @@ const galleryImageMap: Record<string, string[]> = {
     lehImg6,
     lehImg7,
   ],
-  'Viet Nam Ride': [
+  'Vietnam Ride': [
     vietnamImg2,
     vietnamImg3,
     vietnamImg4,

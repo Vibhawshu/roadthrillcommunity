@@ -23,7 +23,7 @@ interface StartNowModalProps {
 }
 
 // Your Google Apps Script Web App URL - Replace with your actual URL
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAIAycmuV-TtCrgXuGFGOYycA7z_WC7TTJr5QBZHnKqAHl9bjvwKN3AZ3U0X2eRSIjyQ/exec'
 
 const StartNowModal: React.FC<StartNowModalProps> = ({ isOpen, onClose }) => {
   const [isSubmitting, setIsSubmitting] = useState(false)

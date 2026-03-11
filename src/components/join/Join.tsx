@@ -268,25 +268,27 @@ const Join: React.FC = () => {
                   )}
                 </div>
 
-                {/* NEW: Driving License Checkbox */}
-                <div className="bg-black/40 border border-white/10 rounded-lg p-4">
-                  <label className="flex items-start gap-3 cursor-pointer group">
-                    <input
-                      type="checkbox"
-                      {...register('drivingLicense')}
-                      className="w-5 h-5 mt-0.5 accent-red-600"
-                    />
-                    <div className="flex-1">
-                      <span className="text-base text-gray-300 group-hover:text-white transition-colors flex items-center gap-2">
-                        <Shield size={18} className="text-red-500" />
-                        I have a valid 2 wheeler driving permit issued by Govt. of India *
-                      </span>
-                      {errors.drivingLicense && (
-                        <p className="mt-2 text-sm text-red-500">{errors.drivingLicense.message}</p>
-                      )}
-                    </div>
-                  </label>
-                </div>
+                {/* Driving License Checkbox - Fixed Alignment */}
+<div className="bg-black/40 border border-white/10 rounded-lg p-4">
+  <label className="flex items-start gap-3 cursor-pointer group">
+    <input
+      type="checkbox"
+      {...register('drivingLicense')}
+      className="w-5 h-5 mt-1 accent-red-600 flex-shrink-0"
+    />
+    <div className="flex-1">
+      <div className="flex items-start gap-2">
+        <Shield size={20} className="text-red-500 flex-shrink-0 mt-0.5" />
+        <span className="text-base text-gray-300 group-hover:text-white transition-colors leading-relaxed">
+          I have a valid 2 wheeler driving permit issued by Govt. of India.*
+        </span>
+      </div>
+      {errors.drivingLicense && (
+        <p className="mt-2 text-sm text-red-500">{errors.drivingLicense.message}</p>
+      )}
+    </div>
+  </label>
+</div>
 
                 {/* Submit Button - BIGGER */}
                 <div className="pt-4">
