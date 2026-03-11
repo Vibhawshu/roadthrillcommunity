@@ -1,0 +1,43 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Santa Ride",
+      "date": "2024-12-25",
+      "location": "City Wide",
+      "time": "Full Day Event",
+      "description": "Join us for a special Christmas ride where we come together to spread joy and kindness. We'll ride as a community to distribute essential supplies and festive goodies to those in need. It's our way of celebrating the spirit of sharing and caring. Smiles along the way go a long way. Ride with us and be a part of giving back this holiday season.",
+      "knowMoreLink": "/events/santa-ride",
+      "rules": "Basic Rules - Helmet, Riding Gears, Shoes - For both Rider & Pillion",
+      "highlights": ["Ride for a cause", "Gift distribution", "Community development", "Ride in costume"],
+      "featured": true,
+      "signature": true
+    },
+    {
+      "id": 2,
+      "title": "Republic Day Ride",
+      "date": "2025-01-26",
+      "location": "City Wide",
+      "time": "Full Day Event",
+      "description": "Join us for our Republic Day Ride - a Signature Road Thrill Ride, a proud tradition that brings our community together to celebrate the Constitution of India. This special ride symbolizes unity, patriotism, and the freedom that connects us all. Ride with us as we honor our country, carry the Indian tricolor with pride, and make this iconic ride a celebration of India's spirit.",
+      "knowMoreLink": "/events/republic-day-ride",
+      "rules": "Basic Rules - Full face helmet, Riding Gears, Shoes - For both Rider & Pillion",
+      "highlights": ["Day ride", "Flag hoisting", "Tradition", "Signature ride", "Special Chief Guest"],
+      "featured": true,
+      "signature": true
+    },
+    {
+      "id": 3,
+      "title": "Independence Day Ride",
+      "date": "2025-08-15",
+      "location": "City Wide",
+      "time": "Full Day Event",
+      "description": "Join us for our Independence Day Ride - a Signature Road Thrill Ride, to celebrate the courage and unity that built our nation. Ride with pride as we honor the journey to freedom. Together we ride with pride, honoring the sacrifices that gave India its independence.",
+      "knowMoreLink": "/events/independence-day-ride",
+      "rules": "Basic Rules - Full face helmet, Riding Gears, Shoes - For both Rider & Pillion",
+      "highlights": ["Day ride", "Flag hoisting", "Tradition", "Signature ride", "Special Chief Guest"],
+      "featured": true,
+      "signature": true
+    }
+  ]
+}

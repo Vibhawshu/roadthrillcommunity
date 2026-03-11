@@ -1,0 +1,83 @@
+{
+  "experiences": [
+    {
+      "id": 1,
+      "title": "Leh Ride",
+      "location": "Leh,India",
+      "date": "May 2018",
+      "image": "/images/experiences/LEH81.jpg",
+      "thumbnail": "/images/experiences/LEH81.jpg",
+      "description": "From snow-capped peaks to winding valleys - Leh, an epic adventure. Riders were Leh'd, embracing the mountains, the thrill, and the beauty of the Himalayas. An unforgettable journey of freedom, friendship, and breathtaking landscapes. A ride that tested, thrilled, and bonded forever.",
+      "riders": 12,
+      "KMs": 2000,
+      "galleryImages": [
+        "/images/experiences/leh/leh-1.jpg",
+        "/images/experiences/leh/leh-2.jpg",
+        "/images/experiences/leh/leh-3.jpg",
+        "/images/experiences/leh/leh-4.jpg",
+        "/images/experiences/leh/leh-5.jpg",
+        "/images/experiences/leh/leh-6.jpg"
+      ],
+      "galleryLink": "https://drive.google.com/drive/folders/1jTMIFv2mCOClmyCNb2fOnme3uUl98gtn?usp=sharing"
+    },
+    {
+      "id": 2,
+      "title": "Viet Nam Ride",
+      "location": "Viet Nam",
+      "date": "Feb 2025",
+      "image": "/images/experiences/spring-1.jpg",
+      "thumbnail": "/images/experiences/thumb/spring-1.jpg",
+      "description": "From bustling streets to serene villages, emerald rice fields to turquoise coastlines – Vietnam, a ride of discovery. Riders immersed in the colors, flavors, and traditions of this incredible land. A journey of connection, curiosity, and unforgettable experiences.",
+      "riders": 11,
+      "KMs": 2500,
+      "galleryImages": [
+        "/images/experiences/vietnam/vietnam-1.jpg",
+        "/images/experiences/vietnam/vietnam-2.jpg",
+        "/images/experiences/vietnam/vietnam-3.jpg",
+        "/images/experiences/vietnam/vietnam-4.jpg",
+        "/images/experiences/vietnam/vietnam-5.jpg"
+      ],
+      "galleryLink": "https://drive.google.com/drive/folders/1IIHKqC00C6oEz6zaf0zQLpn9IjMxvRQD?usp=sharing"
+    },
+    {
+      "id": 3,
+      "title": "Uncharted Terrains",
+      "location": "Karnataka",
+      "date": "April 2024",
+      "image": "/images/experiences/winter-1.jpg",
+      "thumbnail": "/images/experiences/thumb/winter-1.jpg",
+      "description": "Deep into the heart of Karnataka's remote villages, where rugged trails and untamed terrain awaited. Amidst dense forests and rustic landscapes, the raw beauty and quiet charm of village life takes centrestage.",
+      "riders": 19,
+      "KMs": 350,
+      "galleryImages": [
+        "/images/experiences/uncharted/uncharted-1.jpg",
+        "/images/experiences/uncharted/uncharted-2.jpg",
+        "/images/experiences/uncharted/uncharted-3.jpg",
+        "/images/experiences/uncharted/uncharted-4.jpg",
+        "/images/experiences/uncharted/uncharted-5.jpg",
+        "/images/experiences/uncharted/uncharted-6.jpg",
+        "/images/experiences/uncharted/uncharted-7.jpg"
+      ],
+      "galleryLink": "https://drive.google.com/drive/folders/1dL9yfPlpwj_i0lnGAB6171JQshKQlvQe?usp=sharing"
+    },
+    {
+      "id": 4,
+      "title": "Ladakh Ride",
+      "location": "Ladakh",
+      "date": "T.B.D",
+      "image": "/images/experiences/spring-1.jpg",
+      "thumbnail": "/images/experiences/thumb/spring-1.jpg",
+      "description": "From high-altitude passes to stark desert landscapes – Ladakh, a ride like no other! Riders braved the thin air, rugged trails, and the untamed beauty of the mountains.",
+      "riders": 10,
+      "KMs": 2300,
+      "galleryImages": [
+        "/images/experiences/ladakh/ladakh-1.jpg",
+        "/images/experiences/ladakh/ladakh-2.jpg",
+        "/images/experiences/ladakh/ladakh-3.jpg",
+        "/images/experiences/ladakh/ladakh-4.jpg",
+        "/images/experiences/ladakh/ladakh-5.jpg"
+      ],
+      "galleryLink": "#"
+    }
+  ]
+}
