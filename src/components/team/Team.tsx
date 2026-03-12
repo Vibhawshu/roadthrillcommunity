@@ -18,14 +18,11 @@ interface TeamMember {
   role: string
   location?: string
   image?: string
-  social?: {
-    linkedin?: string
-    instagram?: string
-  }
+  
 }
 
 const Team: React.FC = () => {
-  // RT Admins - First (NEW DESIGN)
+  // RT Admins - First
   const admins: TeamMember[] = [
     { name: "Sandeep", role: "RT Bengaluru Admin", location: "Bengaluru", image: rider },
     { name: "Abhishek", role: "RT Bengaluru Admin", location: "Bengaluru", image: abhishekImg },
@@ -45,40 +42,16 @@ const Team: React.FC = () => {
 
   // RT Advisory - Second
   const advisory: TeamMember[] = [
-    { 
-      name: "Arun Hilson", 
-      role: "RT Advisory", 
-      image: rider,
-    },
-    { 
-      name: "Lohith Bittira", 
-      role: "RT Advisory", 
-      image: lohith,
-    },
-    { 
-      name: "Kamal Chodri", 
-      role: "RT Advisory", 
-      image: kamal,
-    },
+    { name: "Arun Hilson", role: "RT Advisory", image: rider },
+    { name: "Lohith Bittira", role: "RT Advisory", image: lohith },
+    { name: "Kamal Chodri", role: "RT Advisory", image: kamal },
   ]
 
   // RT Founders - Third
   const founders: TeamMember[] = [
-    { 
-      name: "Jacinth Paul", 
-      role: "Founder", 
-      image: rider,
-    },
-    { 
-      name: "Tudu", 
-      role: "Founder", 
-      image: rider,
-    },
-    { 
-      name: "Arpan Laha", 
-      role: "Founder", 
-      image: arpan,
-    },
+    { name: "Jacinth Paul", role: "Founder", image: rider },
+    { name: "Tudu", role: "Founder", image: rider },
+    { name: "Arpan Laha", role: "Founder", image: arpan },
   ]
 
   // Helper function to get initials from name (fallback)
@@ -92,7 +65,7 @@ const Team: React.FC = () => {
   }
 
   return (
-    <section id="team" className="relative py-20 md:py-28 overflow-hidden">
+    <section id="team" className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -100,38 +73,36 @@ const Team: React.FC = () => {
           alt="Team background"
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay with gradient for better readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/90 backdrop-blur-sm" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom">
-        {/* Section Header - 3x BIGGER FONT */}
-        <div className="text-center max-w-5xl mx-auto mb-20">
-          <span className="text-red-500 font-semibold text-2xl uppercase tracking-wider mb-6 block">THE TEAM</span>
-          <h2 className="text-white font-bold text-8xl lg:text-9xl xl:text-9xl mb-8">
+        {/* Section Header - Mobile optimized */}
+        <div className="text-center max-w-5xl mx-auto mb-12 sm:mb-16 lg:mb-20">
+          <span className="text-red-500 font-semibold text-lg sm:text-xl lg:text-2xl uppercase tracking-wider mb-3 sm:mb-4 lg:mb-6 block">THE TEAM</span>
+          <h2 className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-4 sm:mb-6 lg:mb-8">
             Team<span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">Road Thrill</span>
           </h2>
-          <p className="text-gray-300 text-3xl lg:text-4xl max-w-4xl mx-auto leading-relaxed">
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl lg:text-3xl max-w-4xl mx-auto leading-relaxed px-4">
             The passionate individuals who make Road Thrill an incredible community of bikers.
           </p>
         </div>
 
-        {/* RT Admins Section - First (NEW DESIGN with bigger pics and overlay) */}
-        <div className="mb-24">
-          <h3 className="text-5xl lg:text-6xl font-bold text-white text-center mb-16 flex items-center justify-center gap-4">
-            <Users className="w-14 h-14 text-red-500" />
-            RT Admin Team
-            <Users className="w-14 h-14 text-red-500" />
+        {/* RT Admins Section */}
+        <div className="mb-16 sm:mb-20 lg:mb-24">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center mb-8 sm:mb-12 lg:mb-16 flex items-center justify-center gap-2 sm:gap-3 lg:gap-4">
+            <Users className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500" />
+            <span>RT Admin Team</span>
+            <Users className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500" />
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 xl:gap-8">
             {admins.map((person, index) => (
               <div
                 key={index}
-                className="group relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300"
+                className="group relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300"
               >
-                {/* Image Container - BIGGER */}
-                <div className="relative h-96 w-full overflow-hidden">
+                <div className="relative h-64 sm:h-72 lg:h-80 xl:h-96 w-full overflow-hidden">
                   {person.image ? (
                     <img 
                       src={person.image} 
@@ -145,20 +116,18 @@ const Team: React.FC = () => {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                      <span className="text-7xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800 w-40 h-40 rounded-full flex items-center justify-center">
+                      <span className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800 w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full flex items-center justify-center">
                         {getInitials(person.name)}
                       </span>
                     </div>
                   )}
                   
-                  {/* Dark Gradient Overlay for text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent" />
                   
-                  {/* Name and Location Overlay at Bottom - BIGGER TEXT */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-                    <h4 className="text-3xl font-bold text-white mb-3">{person.name}</h4>
-                    <p className="text-red-500 font-semibold text-xl flex items-center justify-center gap-2">
-                      <MapPin size={20} className="text-red-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 lg:p-6 xl:p-8 text-center">
+                    <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-1 sm:mb-2 lg:mb-3">{person.name}</h4>
+                    <p className="text-red-500 font-semibold text-sm sm:text-base lg:text-lg xl:text-xl flex items-center justify-center gap-1 sm:gap-2">
+                      <MapPin size={14} className="sm:w-4 sm:h-4 lg:w-5 lg:h-5 text-red-500" />
                       {person.location}
                     </p>
                   </div>
@@ -168,23 +137,22 @@ const Team: React.FC = () => {
           </div>
         </div>
 
-        {/* RT Advisory Section - Second */}
-        <div className="mb-24">
-          <h3 className="text-5xl lg:text-6xl font-bold text-white text-center mb-16 flex items-center justify-center gap-4">
-            <Shield className="w-14 h-14 text-red-500" />
-            RT Advisory
-            <Shield className="w-14 h-14 text-red-500" />
+        {/* RT Advisory Section */}
+        <div className="mb-16 sm:mb-20 lg:mb-24">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center mb-8 sm:mb-12 lg:mb-16 flex items-center justify-center gap-2 sm:gap-3 lg:gap-4">
+            <Shield className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500" />
+            <span>RT Advisory</span>
+            <Shield className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500" />
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 xl:gap-8">
             {advisory.map((person, index) => (
               <div
                 key={index}
-                className="group bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 text-center"
+                className="group bg-black/60 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 text-center"
               >
-                {/* Circular Photo Frame - BIGGER */}
-                <div className="relative w-48 h-48 mx-auto mb-8">
+                <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 mx-auto mb-4 sm:mb-6 lg:mb-8">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600 to-red-800 opacity-75 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute inset-1.5 rounded-full bg-black overflow-hidden ring-4 ring-red-600/50 group-hover:ring-8 group-hover:ring-red-600 transition-all">
+                  <div className="absolute inset-1 sm:inset-1.5 rounded-full bg-black overflow-hidden ring-2 sm:ring-4 ring-red-600/50 group-hover:ring-4 sm:group-hover:ring-8 group-hover:ring-red-600 transition-all">
                     {person.image ? (
                       <img 
                         src={person.image} 
@@ -197,37 +165,36 @@ const Team: React.FC = () => {
                         }}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-5xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800">
+                      <div className="w-full h-full flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800">
                         {getInitials(person.name)}
                       </div>
                     )}
                   </div>
                 </div>
 
-                <h4 className="text-3xl font-bold text-white mb-3">{person.name}</h4>
-                <p className="text-red-500 font-semibold text-xl">{person.role}</p>
+                <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 sm:mb-3">{person.name}</h4>
+                <p className="text-red-500 font-semibold text-sm sm:text-base lg:text-lg xl:text-xl">{person.role}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* RT Founders Section - Third */}
-        <div className="mb-24">
-          <h3 className="text-5xl lg:text-6xl font-bold text-white text-center mb-16 flex items-center justify-center gap-4">
-            <Star className="w-14 h-14 text-red-500 fill-red-500" />
-            Founders
-            <Star className="w-14 h-14 text-red-500 fill-red-500" />
+        {/* RT Founders Section */}
+        <div className="mb-16 sm:mb-20 lg:mb-24">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white text-center mb-8 sm:mb-12 lg:mb-16 flex items-center justify-center gap-2 sm:gap-3 lg:gap-4">
+            <Star className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500 fill-red-500" />
+            <span>Founders</span>
+            <Star className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 text-red-500 fill-red-500" />
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 xl:gap-8">
             {founders.map((person, index) => (
               <div
                 key={index}
-                className="group bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 text-center"
+                className="group bg-black/60 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 hover:border-red-500/30 hover:shadow-2xl hover:shadow-red-600/20 transition-all duration-300 text-center"
               >
-                {/* Circular Photo Frame - BIGGER with Animation */}
-                <div className="relative w-48 h-48 mx-auto mb-8">
+                <div className="relative w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 xl:w-48 xl:h-48 mx-auto mb-4 sm:mb-6 lg:mb-8">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-red-600 to-red-800 animate-pulse opacity-75 group-hover:opacity-100 transition-opacity" />
-                  <div className="absolute inset-1.5 rounded-full bg-black overflow-hidden ring-4 ring-red-600/50 group-hover:ring-8 group-hover:ring-red-600 transition-all">
+                  <div className="absolute inset-1 sm:inset-1.5 rounded-full bg-black overflow-hidden ring-2 sm:ring-4 ring-red-600/50 group-hover:ring-4 sm:group-hover:ring-8 group-hover:ring-red-600 transition-all">
                     {person.image ? (
                       <img 
                         src={person.image} 
@@ -240,47 +207,19 @@ const Team: React.FC = () => {
                         }}
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-5xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800">
+                      <div className="w-full h-full flex items-center justify-center text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white bg-gradient-to-br from-red-600 to-red-800">
                         {getInitials(person.name)}
                       </div>
                     )}
                   </div>
                 </div>
 
-                <h4 className="text-3xl font-bold text-white mb-3">{person.name}</h4>
-                <p className="text-red-500 font-semibold text-xl mb-6">{person.role}</p>
-                
-                {/* Social Links - Commented out as in original */}
-                {/* {person.social && (
-                  <div className="flex justify-center gap-6">
-                    {person.social.linkedin && (
-                      <a href={person.social.linkedin} className="text-gray-400 hover:text-red-500 transition-colors">
-                        <Linkedin size={28} />
-                      </a>
-                    )}
-                    {person.social.instagram && (
-                      <a href={person.social.instagram} className="text-gray-400 hover:text-red-500 transition-colors">
-                        <Instagram size={28} />
-                      </a>
-                    )}
-                  </div>
-                )} */}
+                <h4 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 sm:mb-3">{person.name}</h4>
+                <p className="text-red-500 font-semibold text-sm sm:text-base lg:text-lg xl:text-xl">{person.role}</p>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Join Team CTA - Commented out as in original */}
-        {/* <div className="text-center mt-20">
-          <p className="text-gray-300 mb-8 text-3xl">Want to lead rides in your city?</p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-12 py-6 rounded-full font-bold text-2xl hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-2xl shadow-red-600/30"
-          >
-            Become an RT Admin
-            <Award className="w-8 h-8" />
-          </a>
-        </div> */}
       </div>
     </section>
   )

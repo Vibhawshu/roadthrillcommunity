@@ -448,21 +448,21 @@ const Experiences: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Indicators */}
-        <div className="flex justify-center gap-2 mt-6 lg:hidden">
-          {experiences.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 rounded-full ${
-                index === currentIndex 
-                  ? 'w-8 h-2 bg-red-600 shadow-lg shadow-red-600/50' 
-                  : 'w-2 h-2 bg-white/30 hover:bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+       {/* Mobile Indicators - Optimized */}
+<div className="flex justify-center gap-1.5 mt-4 lg:hidden">
+  {experiences.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => goToSlide(index)}
+      className={`transition-all duration-300 rounded-full ${
+        index === currentIndex 
+          ? 'w-4 h-1 bg-red-600' 
+          : 'w-1.5 h-1 bg-white/30 hover:bg-white/50'
+      }`}
+      aria-label={`Go to slide ${index + 1}`}
+    />
+  ))}
+</div>
 
         {/* Call to Action */}
         <div className="text-center mt-12">

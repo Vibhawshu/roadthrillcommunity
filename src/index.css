@@ -12,55 +12,41 @@
   body {
     font-family: 'Poppins', sans-serif;
     @apply antialiased;
-    @apply text-base lg:text-lg;
+    @apply text-sm md:text-base; /* Smaller base font on mobile */
   }
 }
 
 @layer components {
-  /* Container */
+  /* Container - Responsive */
   .container-custom {
-    @apply max-w-7xl mx-auto px-6 lg:px-12;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
   
-  /* Section padding */
+  /* Section padding - Reduced on mobile */
   .section-padding {
-    @apply py-20 lg:py-28;
+    @apply py-12 md:py-16 lg:py-20;
   }
   
-  /* Headings - using Poppins directly instead of font-display */
+  /* Headings - Progressive scaling */
   .heading-primary {
-    font-family: 'Poppins', sans-serif;
-    @apply text-5xl lg:text-7xl xl:text-8xl font-bold;
+    @apply font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
   }
   
   .heading-secondary {
-    font-family: 'Poppins', sans-serif;
-    @apply text-4xl lg:text-5xl xl:text-6xl font-bold;
+    @apply font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
   }
   
-  /* Buttons */
-  .btn-primary {
-    @apply px-6 lg:px-8 py-3 lg:py-4 text-sm lg:text-base;
+  /* Card text sizes */
+  .card-title {
+    @apply text-lg sm:text-xl md:text-2xl font-bold;
+  }
+  
+  .card-text {
+    @apply text-xs sm:text-sm md:text-base text-gray-300;
   }
 }
 
-/* Custom animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Scrollbar Hide */
+/* Hide scrollbar but keep functionality */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -69,7 +55,25 @@
   scrollbar-width: none;
 }
 
-/* Larger spacing between sections */
-section {
-  scroll-margin-top: 5rem;
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  /* Better touch targets */
+  button, a {
+    @apply min-h-[44px]; /* Apple's recommended touch target size */
+  }
+  
+  /* Prevent horizontal scroll */
+  body {
+    @apply overflow-x-hidden;
+  }
+  
+  /* Adjust grid gaps on mobile */
+  .grid {
+    @apply gap-4;
+  }
+  
+  /* Card padding on mobile */
+  .card-padding {
+    @apply p-4;
+  }
 }
