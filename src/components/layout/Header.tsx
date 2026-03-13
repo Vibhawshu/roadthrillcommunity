@@ -97,15 +97,19 @@ const Header: React.FC = () => {
                 {isMenuOpen ? <X size={20} className="lg:w-5 lg:h-5" /> : <Menu size={20} className="lg:w-5 lg:h-5" />}
               </button>
 
-              {/* Desktop Dropdown Menu */}
+              {/* Desktop Dropdown Menu - GLASS MORPH EFFECT */}
               {isMenuOpen && (
-                <div className="absolute right-0 top-full mt-2 w-56 bg-gray-900/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl py-2 z-50">
-                  <div className="flex flex-col">
+                <div className="absolute right-0 top-full mt-2 w-64 bg-black/20 backdrop-blur-xl border border-white/20 rounded-xl shadow-2xl py-2 z-50">
+                  {/* Frosted glass overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-white/0 rounded-xl pointer-events-none" />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 flex flex-col">
                     {allNavItems.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className="text-gray-200/90 hover:text-white hover:bg-red-600/20 px-4 py-3 text-sm uppercase tracking-wide transition-all duration-300"
+                        className="text-white/90 hover:text-white hover:bg-white/10 px-5 py-3.5 text-sm uppercase tracking-wide transition-all duration-300 border-b border-white/5 last:border-0"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}
@@ -114,7 +118,7 @@ const Header: React.FC = () => {
                     <div className="border-t border-white/10 my-2"></div>
                     <button
                       onClick={handleStartNow}
-                      className="mx-3 mt-1 px-4 py-2 bg-gradient-to-r from-red-600 to-red-700 rounded-lg text-white text-sm uppercase tracking-wide font-medium hover:from-red-700 hover:to-red-800 transition-all duration-300"
+                      className="mx-4 my-2 px-4 py-2.5 bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-sm rounded-lg text-white text-sm uppercase tracking-wide font-medium hover:from-red-600 hover:to-red-700 transition-all duration-300 border border-white/10"
                     >
                       START NOW
                     </button>
@@ -141,7 +145,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* MOBILE VIEW - Simplified Navigation */}
+      {/* MOBILE VIEW */}
       
       {/* Mobile Top Bar with Logo and Menu */}
       <div className="md:hidden fixed top-0 left-0 right-0 bg-gray-900/80 backdrop-blur-md border-b border-white/10 z-50">
@@ -158,15 +162,19 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Slide-down Menu */}
+        {/* Mobile Slide-down Menu - GLASS MORPH EFFECT */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-lg border-b border-white/10 py-2 max-h-[80vh] overflow-y-auto">
-            <div className="flex flex-col">
+          <div className="absolute top-full left-0 right-0 bg-black/20 backdrop-blur-xl border-b border-white/20 py-2 max-h-[80vh] overflow-y-auto">
+            {/* Frosted glass overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-white/0 pointer-events-none" />
+            
+            {/* Content */}
+            <div className="relative z-10 flex flex-col">
               {allNavItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-200 hover:text-white px-6 py-4 text-base uppercase tracking-wide border-b border-white/5 last:border-0"
+                  className="text-white/90 hover:text-white hover:bg-white/10 px-6 py-4 text-base uppercase tracking-wide border-b border-white/5 last:border-0 transition-all duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -175,7 +183,7 @@ const Header: React.FC = () => {
               <div className="px-6 py-4">
                 <button
                   onClick={handleStartNow}
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-3 rounded-full text-sm uppercase tracking-wide font-medium"
+                  className="w-full bg-gradient-to-r from-red-600/90 to-red-700/90 backdrop-blur-sm text-white py-3.5 rounded-full text-sm uppercase tracking-wide font-medium hover:from-red-600 hover:to-red-700 transition-all duration-300 border border-white/10"
                 >
                   START NOW
                 </button>
@@ -185,10 +193,8 @@ const Header: React.FC = () => {
         )}
       </div>
 
-      {/* Mobile Top Spacer - This pushes content below the fixed header */}
-      <div className="md:hidden h-14" /> {/* Exactly matches mobile header height (56px) */}
-
-      {/* No bottom spacer needed since we don't have bottom nav on mobile */}
+      {/* Mobile Top Spacer */}
+      <div className="md:hidden h-14" />
 
       <StartNowModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>

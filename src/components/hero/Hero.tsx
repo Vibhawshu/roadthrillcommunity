@@ -131,21 +131,21 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Carousel Indicators - Fixed for mobile */}
-      <div className="absolute bottom-4 sm:bottom-8 md:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-20 flex gap-1 sm:gap-1.5 md:gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`rounded-full transition-all ${
-              index === currentSlide 
-                ? 'w-2.5 sm:w-3 md:w-4 h-0.5 sm:h-1 bg-red-600' 
-                : 'w-1 sm:w-1.5 h-0.5 sm:h-1 bg-white/50 hover:bg-white/80'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Carousel Indicators - Perfect circles */}
+<div className="absolute bottom-4 sm:bottom-8 md:bottom-12 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-20 flex gap-2 sm:gap-3">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      onClick={() => setCurrentSlide(index)}
+      className={`rounded-full transition-all duration-300 ${
+        index === currentSlide 
+          ? 'w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-600' 
+          : 'w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white/40 hover:bg-white/70'
+      }`}
+      aria-label={`Go to slide ${index + 1}`}
+    />
+  ))}
+</div>
     </section>
   )
 }

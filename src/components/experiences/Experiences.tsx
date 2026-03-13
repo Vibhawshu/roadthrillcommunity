@@ -448,16 +448,16 @@ const Experiences: React.FC = () => {
           </div>
         </div>
 
-       {/* Mobile Indicators - Optimized */}
+       {/* Mobile Indicators - Small dots */}
 <div className="flex justify-center gap-1.5 mt-4 lg:hidden">
   {experiences.map((_, index) => (
     <button
       key={index}
       onClick={() => goToSlide(index)}
-      className={`transition-all duration-300 rounded-full ${
+      className={`rounded-full transition-all duration-300 ${
         index === currentIndex 
-          ? 'w-4 h-1 bg-red-600' 
-          : 'w-1.5 h-1 bg-white/30 hover:bg-white/50'
+          ? 'w-2 h-2 bg-red-600' 
+          : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/70'
       }`}
       aria-label={`Go to slide ${index + 1}`}
     />
